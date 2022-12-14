@@ -1,14 +1,21 @@
 // 1. Вивести на сторінку в один рядок через кому числа від 10 до 20.
 console.group('Вивести на сторінку в один рядок через кому числа від 10 до 20.');
-const number = 20;
-for (let i = 10; i <= number; i++){
-    console.log(i);
+let number = 10;
+let result = '';
+while (number < 21) {
+    if (number === 20) {
+        result += number;
+    } else {
+        result +=`${number},`;
+    }
+    number++;
+    
 }
-console.groupEnd();
+console.groupEnd(result);
 
 // 2. Вивести квадрати чисел від 10 до 20.
 console.group('Вивести квадрати чисел від 10 до 20.');
-for (let i = 10; i <= number; i++) {
+for (let i = 10; i <= 20; i++) {
     console.log(i ** 2);
 }
 console.groupEnd();
@@ -45,7 +52,8 @@ console.group('Вивести суму лише парних чисел в ді�
 let sum2 = 0
 for (let i = 30; i < 81; i++) {
     if (i % 2 === 0) {
-        console.log(sum2 = sum2 + i);
+        sum2 = sum2 + i;
+        console.log(sum2);
     }
 }
 console.groupEnd();
