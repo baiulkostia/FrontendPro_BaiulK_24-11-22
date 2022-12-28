@@ -3,12 +3,11 @@
 const array = [1, 2, 3, 4, 5, 6, 7];
 
 function removeElement(array, item) {
-    for (i = 0; i < array.length; i++) {
-        const element = item;
-        if (array.indexOf(array[i]) === element) {
-            array.splice(element, 1);
-        }
+    if (array.indexOf(item) !== -1) {
+        array.splice(item, 1);
+    } else {
+       return array.indexOf(item);
     }
     return array;
 }
-console.log(removeElement([1, 2, 3, 4, 5, 6, 7], 2));
+console.log(removeElement([1, 2, 3, 4, 5, 6, 7], 3));
